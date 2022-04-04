@@ -5,12 +5,35 @@
   <title>Eavesdropper</title>
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allison&family=Major+Mono+Display&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
   <script src="js/script.js" defer></script>
 </head>
 <body>
+  <img class="logo" src="img/logo.png" alt="logo" />
 
+  <h1 class="main-heading">Speak out loud and your words will appear below!</h1>
+  
   <div class="words" contenteditable>
+    <p></p>
   </div>
+
+  <h2 class="note"><span>Note:</span> you can edit the text (using the keyboard)</h2>
+
+  <button>Erase!</button>
+
+  <h2 class="credits">Made With ❤️ By &#160; &#160;<a class="marker" href="https://www.ahmedebid.com/">Ahmed Ebid</a></h2>
+
+  <!-- SVG filter for the marker used over the word "Ahmed Ebid" -->
+  <svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
+    <defs>
+      <filter id="marker-shape">
+        <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+        <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+      </filter>
+    </defs>
+  </svg>
 
 </body>
 </html>

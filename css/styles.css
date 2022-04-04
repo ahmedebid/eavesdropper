@@ -3,15 +3,31 @@ html {
 }
 
 body {
-    background: #ffc600;
-    font-family: 'helvetica neue';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #E5E5E5;
+    font-family: 'Roboto', sans-serif;
     font-weight: 200;
-    font-size: 20px;
+    font-size: 2em;
+}
+
+.logo {
+    margin-top: 20px;
+    width: 300px;
+}
+
+.main-heading {
+    font-size: 1.25em;
+    margin-top: 50px;
+    font-weight: 700;
 }
 
 .words {
-    max-width: 500px;
-    margin: 50px auto;
+    font-weight: 300;
+    width: 600px;
+    margin: 50px auto 10px auto;
     background: white;
     border-radius: 5px;
     box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
@@ -20,10 +36,6 @@ body {
     background-size: 100% 3rem;
     position: relative;
     line-height: 3rem;
-}
-  
-p {
-    margin: 0 0 3rem;
 }
 
 .words:before {
@@ -35,4 +47,68 @@ p {
     bottom: 0;
     border: 1px solid;
     border-color: transparent #efe4e4;
+}
+  
+p {
+    margin: 0 0 3rem;
+}
+
+.note {
+    font-size: 0.75em;
+    font-weight: 300;
+}
+
+.note span {
+    text-decoration: underline;
+}
+
+button {
+    display: inline-block;
+    padding: 0.5em 1.7em;
+    margin: 50px auto;
+    border: 0.16em solid #E87121;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #E87121;
+    text-align: center;
+    transition: all 0.2s;
+}
+  
+button:hover {
+    color: #E5E5E5;
+    background-color: #E87121;
+}
+
+.credits {
+    font-size: 1.3em;
+    font-weight: 300;
+    font-family: 'Allison', cursive;
+}
+
+.credits a {
+    text-decoration: none;
+    font-family: 'Major Mono Display', monospace;
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.7em;
+}
+
+.marker{
+    position:relative;
+}
+  
+.marker:before{
+    content:"";
+    background-color:#000;
+    width:100%;
+    height:1em;
+    position:absolute;
+    z-index:-1;
+    filter:url(#marker-shape);
+    left:-0.25em;
+    top:0.1em;
+    padding:0 0.25em;
 }
